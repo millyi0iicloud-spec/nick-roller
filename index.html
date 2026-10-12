@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Roller</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="balance">
+      <span id="coins">0</span> 🪙
+    </div>
+    <div class="user">@<span id="username">user</span></div>
+  </header>
+
+  <main>
+    <div class="roulette">
+      <div id="nick-display" class="nick-display common">
+        <span id="nick-text">Нажми крутить</span>
+        <div id="nick-rarity" class="rarity-label"></div>
+      </div>
+      <button id="spin-btn" class="spin-btn">Крутить (50 🪙)</button>
+    </div>
+
+    <div class="inventory">
+      <h3>Инвентарь</h3>
+      <div id="inventory-list" class="inventory-list"></div>
+    </div>
+
+    <div class="shop">
+      <h3>Магазин</h3>
+      <button class="buy-btn" data-stars="1" data-coins="100">100 🪙 — 1 ★</button>
+      <button class="buy-btn" data-stars="5" data-coins="600">600 🪙 — 5 ★</button>
+      <button class="buy-btn" data-stars="20" data-coins="3000">3000 🪙 — 20 ★</button>
+      <button class="boost-btn" data-stars="10" data-boost="lucky">🍀 Lucky Boost (x2 Rare) — 10 ★</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
