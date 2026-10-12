@@ -1,0 +1,6 @@
+{
+  "common": ["firewolf", "darkmoon", "icestar", "ironking", "skyfox"],
+  "rare": ["ghostblade", "stormraven", "viperx", "neonnova"],
+  "epic": ["legendx", "phoenix99", "shadowtitan"],
+  "legendary": ["omega", "apex", "god"]
+}
