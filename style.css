@@ -1,0 +1,109 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+
+body {
+  background: #0f0f1a;
+  color: #fff;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.balance { font-weight: 700; color: #ffd700; }
+
+.roulette { text-align: center; margin-bottom: 32px; }
+
+.nick-display {
+  padding: 40px 20px;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.nick-display.common { background: #2a2a3a; border-color: #555; }
+.nick-display.rare { background: #1a3a5a; border-color: #3b82f6; box-shadow: 0 0 20px #3b82f6; }
+.nick-display.epic { background: #3a1a5a; border-color: #a855f7; box-shadow: 0 0 30px #a855f7; }
+.nick-display.legendary {
+  background: linear-gradient(135deg, #5a3a00, #7a5a00);
+  border-color: #ffd700;
+  box-shadow: 0 0 40px #ffd700;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 40px #ffd700; }
+  50% { box-shadow: 0 0 60px #ffd700, 0 0 80px #ff8c00; }
+}
+
+.rarity-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+.spin-btn {
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b00, #ff0080);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.spin-btn:disabled { opacity: 0.5; }
+
+.inventory, .shop { margin-bottom: 24px; }
+
+.inventory h3, .shop h3 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.inventory-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+}
+
+.inv-item {
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.inv-item.common { background: #2a2a3a; }
+.inv-item.rare { background: #1a3a5a; color: #93c5fd; }
+.inv-item.epic { background: #3a1a5a; color: #d8b4fe; }
+.inv-item.legendary { background: #5a3a00; color: #ffd700; }
+
+.shop { display: flex; flex-direction: column; gap: 8px; }
+
+.buy-btn, .boost-btn {
+  padding: 14px;
+  background: #1a1a2a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.boost-btn { background: linear-gradient(135deg, #1a3a1a, #2a5a2a); border-color: #22c55e; }
